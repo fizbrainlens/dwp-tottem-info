@@ -8,7 +8,7 @@ export default function LogoIqos() {
 			width={1000}
 			height={900}
 			priority
-			className="mt-[100px] w-[900px]"
+			className="mt-[50px] lg:mt-[100px] w-[500px] lg:w-[900px]"
 		/>
 	);
 }

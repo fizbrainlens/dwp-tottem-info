@@ -14,7 +14,7 @@ export default function MainNavButton({
 		<Button
 			asChild
 			variant={"link"}
-			className={`w-3xl py-16 text-5xl rounded-full font-bold ${className ?? ""}`}
+			className={`w-[300px] lg:w-3xl py-8 lg:py-16 text-xl lg:text-5xl rounded-full font-bold ${className ?? ""}`}
 		>
 			<Link href={iqosLink}>{iqosLabel}</Link>
 		</Button>

@@ -6,7 +6,7 @@ export default function Home() {
 	return (
 		<div
 			className="p-3 w-full flex flex-col items-center h-screen
-		bg-[url(/bg-tottem-info.webp)] bg-cover bg-center text-white"
+			bg-[url(/bg-tottem-info.webp)] bg-cover bg-center text-white"
 		>
 			<div>
 				<LogoIqos />
@@ -17,10 +17,10 @@ export default function Home() {
 					alt="Discover Your Curiosity"
 					width={600}
 					height={300}
-					className="my-[250px]"
+					className="my-[100px] lg:my-[250px] w-[200px] lg:w-[600px] h-auto"
 				/>
 			</div>
-			<div className="flex flex-col gap-10">
+			<div className="flex flex-col gap-5 lg:gap-10">
 				<MainNavButton
 					iqosLabel="DWP MAPS"
 					iqosLink="#"
