@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 export default function NavLegends() {
 	return (
 		<div
-			className="mt-[200px] flex flex-col bottom-0 absolute w-fit
-				gap-7 py-15 px-5 border-2 rounded-4xl items-center mb-10 font-iqos"
+			className="flex flex-col bottom-0 absolute w-fit mx-12
+				gap-7 py-15 px-5 border-2 rounded-4xl items-center mb-10 font-iqos z-10"
 		>
 			<h3 className="uppercase text-[#20d4d5] text-6xl font-semibold text-center bg-[#35303f] p-3 size-fit -mt-[105px]">
 				LEGENDS

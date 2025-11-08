@@ -1,13 +1,22 @@
 import Image from "next/image";
 
-export default function MapDwp() {
+interface Props {
+	zoom?: boolean;
+}
+
+export default function MapDwp({
+	zoom
+} : Props) {
 	return (
-		<Image
-			src={"/map-dwp-main.png"}
-			alt="DWP Map"
-			width={1000}
-			height={900}
-			className="mt-30"
-		/>
+		(zoom === true ? (<div>test</div>) : (
+			<Image
+				src={"/map-dwp-main.png"}
+				alt="DWP Map"
+				width={1200}
+				height={900}
+				className="mt-30 p-5"
+			/>
+		))
+		
 	);
 }
