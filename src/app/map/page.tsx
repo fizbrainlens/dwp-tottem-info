@@ -1,15 +1,25 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import LogoIqos from "@/components/LogoIqos";
+import MapsDiscoverDeck from "@/components/maps/MapsDiscoverDeck";
+import MapsDrumnBus from "@/components/maps/MapsDrumnBus";
+import MapsGiantMap from "@/components/maps/MapsGiantMap";
+import MapsIqosLand from "@/components/maps/MapsIqosLand";
 import MapsMain from "@/components/maps/MapsMain";
+import MapsPenthouse from "@/components/maps/MapsPenthouse";
+import MapsQrideShelter from "@/components/maps/MapsQrideShelter";
+import MapsQrideStation from "@/components/maps/MapsQrideStation";
+import MapsRegistrationBooth from "@/components/maps/MapsRegistrationBooth";
 import MapsStage1 from "@/components/maps/MapsStage1";
 import MapsStage2 from "@/components/maps/MapsStage2";
-import { useSearchParams } from "next/navigation";
+import MapsStage3 from "@/components/maps/MapsStage3";
+import MapsVvipBlowfish from "@/components/maps/MapsVvipBlowfish";
 
 export default function MapDwpPage() {
-	const searchParams = useSearchParams()
+	const searchParams = useSearchParams();
 
-	const mapPage = searchParams.get('page')
+	const mapPage = searchParams.get("page");
 
 	return (
 		<div
@@ -20,9 +30,31 @@ export default function MapDwpPage() {
 				<LogoIqos />
 			</div>
 
-			{mapPage === 'stage1' && <MapsStage1 />}
-			{mapPage === 'stage2' && <MapsStage2 />}
-			{(!mapPage || (mapPage !== 'stage1' && mapPage !== 'stage2')) && <MapsMain />}
+			{mapPage === "stage1" && <MapsStage1 />}
+			{mapPage === "stage2" && <MapsStage2 />}
+			{mapPage === "stage3" && <MapsStage3 />}
+			{mapPage === "vvipblowfish" && <MapsVvipBlowfish />}
+			{mapPage === "thediscoverydeck" && <MapsDiscoverDeck />}
+			{mapPage === "qrideshelter" && <MapsQrideShelter />}
+			{mapPage === "qridestation" && <MapsQrideStation />}
+			{mapPage === "regbooth" && <MapsRegistrationBooth />}
+			{mapPage === "giantmap" && <MapsGiantMap />}
+			{mapPage === "drumnbus" && <MapsDrumnBus />}
+			{mapPage === "iqosland" && <MapsIqosLand />}
+			{mapPage === "penthouse" && <MapsPenthouse />}
+			{(!mapPage ||
+				(mapPage !== "stage1" &&
+					mapPage !== "stage2" &&
+					mapPage !== "stage3" &&
+					mapPage !== "vvipblowfish" &&
+					mapPage !== "thediscoverydeck" &&
+					mapPage !== "qrideshelter" &&
+					mapPage !== "qridestation" &&
+					mapPage !== "regbooth" &&
+					mapPage !== "giantmap" &&
+					mapPage !== "drumnbus" &&
+					mapPage !== "iqosland" &&
+					mapPage !== "penthouse")) && <MapsMain />}
 		</div>
 	);
 }

@@ -20,7 +20,7 @@ export default function MapsButton({ title, iconUrl, linkUrl }: Props) {
 				<div className="w-14 flex-none pl-2">
 					<Image src={`/icon/${iconUrl}`} width={50} height={50} alt={title} />
 				</div>
-				<div className="text-2xl flex-1 text-center uppercase text-wrap">
+				<div className="text-xl flex-1 text-center uppercase text-wrap">
 					{title}
 				</div>
 			</Link>
