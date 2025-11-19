@@ -23,7 +23,7 @@ export default function RootLayout({
 				)}
 			>
 				<div
-					className="w-full h-screen flex flex-col items-center 
+					className="w-full min-h-screen flex flex-col items-center 
 				bg-[#000000]"
 				>
 					{children}
