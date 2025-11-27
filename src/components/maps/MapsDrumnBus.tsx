@@ -22,7 +22,7 @@ export default function MapsDrumnBus() {
 			<MapZoom
 				mapFile="drumnbus.png"
 				iconUrl="icon-drumnbus"
-				title="DRUM AND BUS"
+				title="BEATS & BUS"
 				content={content}
 			/>
 			<NavLegends />

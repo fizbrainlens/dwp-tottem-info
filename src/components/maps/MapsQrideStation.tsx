@@ -7,7 +7,7 @@ export default function MapsQrideStation() {
 			<MapZoom
 				mapFile="qride-station.png"
 				iconUrl="icon-qride"
-				title="QRIDE STATION"
+				title="Q RIDE SHELTER B"
 				content="End your night the smart way. Skip the crowd,
 				skip the jam, hop on out dedicated ride service
 				with a personal driver ready to take you home
