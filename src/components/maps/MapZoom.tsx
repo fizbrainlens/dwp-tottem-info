@@ -14,7 +14,15 @@ interface Props {
 	popHeight?: number;
 }
 
-export default function MapZoom({ mapFile, iconUrl, title, content, popImage, popWidth, popHeight }: Props) {
+export default function MapZoom({
+	mapFile,
+	iconUrl,
+	title,
+	content,
+	popImage,
+	popWidth,
+	popHeight,
+}: Props) {
 	console.log("maps: ", mapFile);
 
 	const renderContent = () => {
@@ -35,15 +43,14 @@ export default function MapZoom({ mapFile, iconUrl, title, content, popImage, po
                 flex justify-center-safe"
 			>
 				<div className="w-[85%] absolute bottom-[38%] font-iqos">
-					
 					{popImage ? (
 						<div className="flex justify-center">
-						<Image
-							src={`/popup/${popImage}.png`}
-							alt={title}
-							width={popWidth || 800}
-							height={popHeight || 700}
-						/>
+							<Image
+								src={`/popup/${popImage}.png`}
+								alt={title}
+								width={popWidth || 800}
+								height={popHeight || 700}
+							/>
 						</div>
 					) : (
 						<div>

@@ -9,7 +9,12 @@ interface Props {
 	className?: string;
 }
 
-export default function MapsButton({ title, iconUrl, linkUrl, className }: Props) {
+export default function MapsButton({
+	title,
+	iconUrl,
+	linkUrl,
+	className,
+}: Props) {
 	return (
 		<Button
 			asChild

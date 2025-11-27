@@ -22,7 +22,7 @@ export default function MapsQrideShelter() {
 			<MapZoom
 				mapFile="qride-shelter.png"
 				iconUrl="icon-qride"
-				title="QRIDE SHELTER A" 
+				title="QRIDE SHELTER A"
 				content={content}
 				popImage="pop-qridesheltera"
 				popHeight={550}

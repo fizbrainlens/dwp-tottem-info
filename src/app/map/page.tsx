@@ -5,7 +5,9 @@ import LogoIqos from "@/components/LogoIqos";
 import MapsDiscoverDeck from "@/components/maps/MapsDiscoverDeck";
 import MapsDrumnBus from "@/components/maps/MapsDrumnBus";
 import MapsGiantMap from "@/components/maps/MapsGiantMap";
+import MapsHouseofIqos from "@/components/maps/MapsHouseofIqos";
 import MapsIqosLand from "@/components/maps/MapsIqosLand";
+import MapsKeyholePortal from "@/components/maps/MapsKeyholePortal";
 import MapsMain from "@/components/maps/MapsMain";
 import MapsPenthouse from "@/components/maps/MapsPenthouse";
 import MapsQrideShelter from "@/components/maps/MapsQrideShelter";
@@ -14,10 +16,8 @@ import MapsRegistrationBooth from "@/components/maps/MapsRegistrationBooth";
 import MapsStage1 from "@/components/maps/MapsStage1";
 import MapsStage2 from "@/components/maps/MapsStage2";
 import MapsStage3 from "@/components/maps/MapsStage3";
-import MapsVvipBlowfish from "@/components/maps/MapsVvipBlowfish";
-import MapsHouseofIqos from "@/components/maps/MapsHouseofIqos";
 import MapsTunnelExperience from "@/components/maps/MapsTunnelExperience";
-import MapsKeyholePortal from "@/components/maps/MapsKeyholePortal";
+import MapsVvipBlowfish from "@/components/maps/MapsVvipBlowfish";
 
 export default function MapDwpPage() {
 	const searchParams = useSearchParams();

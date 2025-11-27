@@ -1,7 +1,7 @@
-import MapDwp from "./MapDwp";
-import NavLegends from "./NavLegends";
 import Image from "next/image";
 import Link from "next/link";
+import MapDwp from "./MapDwp";
+import NavLegends from "./NavLegends";
 
 export default function MapsMain() {
 	return (
@@ -14,7 +14,12 @@ export default function MapsMain() {
 						Back to menu
 					</div>
 					<div>
-						<Image src="/btn-back.png" alt="button back" width={80} height={80} />
+						<Image
+							src="/btn-back.png"
+							alt="button back"
+							width={80}
+							height={80}
+						/>
 					</div>
 				</div>
 			</Link>
