@@ -24,6 +24,9 @@ export default function MapsQrideShelter() {
 				iconUrl="icon-qride"
 				title="QRIDE SHELTER A" 
 				content={content}
+				popImage="pop-qridesheltera"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>

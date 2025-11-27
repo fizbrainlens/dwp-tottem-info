@@ -7,7 +7,8 @@ export default function NavLegends() {
 	return (
 		<div
 			className="flex flex-col bottom-0 absolute w-fit mx-12
-				gap-7 py-15 px-5 border-2 rounded-4xl items-center mb-10 font-iqos z-10"
+				gap-7 py-15 px-5 border-2 rounded-4xl items-center mb-10 font-iqos z-10
+				bg-linear-to-t from-[#17898f] from-0% to-transparent to-60%"
 		>
 			<h3 className="uppercase text-[#20d4d5] text-6xl font-semibold text-center bg-[#35303f] p-3 size-fit -mt-[105px]">
 				LEGENDS

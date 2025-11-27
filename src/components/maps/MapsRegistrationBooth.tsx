@@ -12,6 +12,9 @@ export default function MapsRegistrationBooth() {
 				step into a rave experience that's smoother,
 				faster, and completely hustle-free, because
 				the best nights start easy."
+				popImage="pop-registrationbooth"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>

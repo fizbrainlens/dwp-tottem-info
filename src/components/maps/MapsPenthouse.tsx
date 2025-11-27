@@ -27,6 +27,9 @@ export default function MapsPenthouse() {
 				iconUrl="icon-penthouse"
 				title="PENTHOUSE"
 				content={content}
+				popImage="pop-penthouse"
+				popHeight={650}
+				popWidth={650}
 			/>
 			<NavLegends />
 		</div>

@@ -12,6 +12,7 @@ export default function MapsHouseofIqos() {
 				step into a rave experience that's smoother,
 				faster, and completely hustle-free, because
 				the best nights start easy."
+				popImage="pop-houseofiqos"
 			/>
 			<NavLegends />
 		</div>

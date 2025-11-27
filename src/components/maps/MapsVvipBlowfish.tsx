@@ -12,6 +12,9 @@ export default function MapsVvipBlowfish() {
 				DWP. Sip, mingle and dance in style
 				surrounded by an immersive setup curated
 				comfort, connection, and celebration."
+				popImage="pop-vvipblowfish"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>

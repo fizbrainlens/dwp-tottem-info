@@ -25,6 +25,9 @@ export default function MapsIqosLand() {
 				iconUrl="icon-iqosland"
 				title="IQOS LAND"
 				content={content}
+				popImage="pop-iqosland"
+				popHeight={650}
+				popWidth={650}
 			/>
 			<NavLegends />
 		</div>

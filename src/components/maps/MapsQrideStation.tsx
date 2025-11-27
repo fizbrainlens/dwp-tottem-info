@@ -12,6 +12,9 @@ export default function MapsQrideStation() {
 				skip the jam, hop on out dedicated ride service
 				with a personal driver ready to take you home
 				fast, safe, and hassle-free, exclusively for IQOS users."
+				popImage="pop-qrideshelterb"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>

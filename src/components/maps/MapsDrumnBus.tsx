@@ -24,6 +24,9 @@ export default function MapsDrumnBus() {
 				iconUrl="icon-drumnbus"
 				title="BEATS & BUS"
 				content={content}
+				popImage="pop-beatsnbus"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>

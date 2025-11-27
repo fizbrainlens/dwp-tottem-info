@@ -6,15 +6,16 @@ interface Props {
 	title: string;
 	iconUrl: string;
 	linkUrl: string;
+	className?: string;
 }
 
-export default function MapsButton({ title, iconUrl, linkUrl }: Props) {
+export default function MapsButton({ title, iconUrl, linkUrl, className }: Props) {
 	return (
 		<Button
 			asChild
 			variant={"ghost"}
-			className="py-9 px-5 w-[300px] border 
-        rounded-full hover:bg-slate-600 hover:text-white"
+			className={`py-9 px-5 w-[300px] border 
+        rounded-full hover:bg-slate-600 hover:text-white ${className}`}
 		>
 			<Link href={linkUrl} className="flex gap-2 items-center">
 				<div className="w-14 flex-none pl-2">

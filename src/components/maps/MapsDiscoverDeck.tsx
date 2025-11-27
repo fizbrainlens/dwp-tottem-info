@@ -13,6 +13,9 @@ export default function MapsDiscoverDeck() {
 				mezzanine spot offers an exclusive bird's-eye
 				view of the main stage, where every beat and 
 				light hit differently from above."
+				popImage="pop-discoverydeck"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>

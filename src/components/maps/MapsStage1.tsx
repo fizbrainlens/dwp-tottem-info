@@ -14,6 +14,9 @@ export default function MapsStage1() {
                 alive at the iconic garuda stage and immerse
                 in stunning performance by local, national, and
                 international electronic music artis."
+				popImage="pop-stage1"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>

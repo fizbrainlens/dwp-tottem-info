@@ -17,6 +17,7 @@ import MapsStage3 from "@/components/maps/MapsStage3";
 import MapsVvipBlowfish from "@/components/maps/MapsVvipBlowfish";
 import MapsHouseofIqos from "@/components/maps/MapsHouseofIqos";
 import MapsTunnelExperience from "@/components/maps/MapsTunnelExperience";
+import MapsKeyholePortal from "@/components/maps/MapsKeyholePortal";
 
 export default function MapDwpPage() {
 	const searchParams = useSearchParams();
@@ -46,6 +47,7 @@ export default function MapDwpPage() {
 			{mapPage === "penthouse" && <MapsPenthouse />}
 			{mapPage === "houseofiqos" && <MapsHouseofIqos />}
 			{mapPage === "tunnelexperience" && <MapsTunnelExperience />}
+			{mapPage === "keyholeportal" && <MapsKeyholePortal />}
 			{(!mapPage ||
 				(mapPage !== "stage1" &&
 					mapPage !== "stage2" &&
@@ -60,7 +62,8 @@ export default function MapDwpPage() {
 					mapPage !== "iqosland" &&
 					mapPage !== "penthouse" &&
 					mapPage !== "houseofiqos" &&
-					mapPage !== "tunnelexperience")) && <MapsMain />}
+					mapPage !== "tunnelexperience" &&
+					mapPage !== "keyholeportal")) && <MapsMain />}
 		</div>
 	);
 }

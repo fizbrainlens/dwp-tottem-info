@@ -13,6 +13,9 @@ export default function MapsStage2() {
                 over. Let the powerfull drops ignite your spirit
                 as world-class DJs and nation heroes bring
                 unstoppable energy."
+				popImage="pop-stage2"
+				popHeight={550}
+				popWidth={550}
 			/>
 			<NavLegends />
 		</div>
