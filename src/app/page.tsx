@@ -28,12 +28,12 @@ export default function Home() {
 				/>
 				<MainNavButton
 					iqosLabel="PROGRAM PRIVILEGES"
-					iqosLink="#"
+					iqosLink="/privileges"
 					className="bg-[#ffffff] text-[#34303e] hover:no-underline"
 				/>
 				<MainNavButton
 					iqosLabel="STAGE RUNDOWN"
-					iqosLink="#"
+					iqosLink="/rundown"
 					className="bg-[#ffffff] text-[#34303e] hover:no-underline"
 				/>
 			</div>
