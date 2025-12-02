@@ -65,7 +65,6 @@ export default function RootLayout({
 							</div>
 						</div>
 					</div> */}
-
 				</div>
 			</body>
 		</html>

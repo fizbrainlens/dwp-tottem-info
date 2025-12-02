@@ -23,21 +23,20 @@ export default function PrivilegesPage() {
 				/>
 
 				<Link href="/" className="self-end">
-				<div className="flex justify-center items-center mr-14 mt-12">
-					<div className="uppercase font-iqos text-2xl mr-4 tracking-wider">
-						Back to menu
+					<div className="flex justify-center items-center mr-14 mt-12">
+						<div className="uppercase font-iqos text-2xl mr-4 tracking-wider">
+							Back to menu
+						</div>
+						<div>
+							<Image
+								src="/btn-back.png"
+								alt="button back"
+								width={80}
+								height={80}
+							/>
+						</div>
 					</div>
-					<div>
-						<Image
-							src="/btn-back.png"
-							alt="button back"
-							width={80}
-							height={80}
-						/>
-					</div>
-				</div>
-			</Link>
-
+				</Link>
 			</div>
 		</div>
 	);

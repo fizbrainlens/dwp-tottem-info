@@ -12,7 +12,7 @@ type PingMap = {
 	top: number;
 	left: number;
 	name: string;
-}
+};
 
 export default function MapDwp({ zoom }: Props) {
 	const pingMap: PingMap[] = [
@@ -32,7 +32,7 @@ export default function MapDwp({ zoom }: Props) {
 		{ id: 14, top: 27, left: 82.3, name: "Discovery Deck" },
 		{ id: 15, top: 21, left: 67, name: "Stage 1" },
 	];
-		
+
 	return zoom === true ? (
 		<div>test</div>
 	) : (
@@ -57,7 +57,11 @@ export default function MapDwp({ zoom }: Props) {
 			>
 				<div>
 					{pingMap.map((ping) => (
-						<div key={ping.id} style={{ top: `${ping.top}%`, left: `${ping.left}%` }} className={`absolute z-30 size-3`}>
+						<div
+							key={ping.id}
+							style={{ top: `${ping.top}%`, left: `${ping.left}%` }}
+							className={`absolute z-30 size-3`}
+						>
 							<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
 							{/* <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span> */}
 						</div>
@@ -79,7 +83,6 @@ export default function MapDwp({ zoom }: Props) {
 						className="relative z-30 animate-bounce
 					-top-60 left-124 transform -translate-x-1/2 -translate-y-1/2"
 					/>
-
 				</div>
 			</TransformComponent>
 		</TransformWrapper>
