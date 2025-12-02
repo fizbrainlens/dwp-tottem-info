@@ -35,14 +35,14 @@ export default function MapZoom({
 			style={{
 				backgroundImage: `url(/mapzoom/${mapFile})`,
 			}}
-			className={`h-[900px] bg-no-repeat 
-            bg-cover bg-top rounded-t-[150px] mask-t-from-80% mask-t-to-90%`}
+			className={`h-[870px] bg-no-repeat 
+            bg-cover bg-position-[center_top_-5rem] rounded-t-[150px] mask-t-from-80% mask-t-to-90%`}
 		>
 			<div
 				className="h-[900px] bg-linear-to-b from-transparent from-0%  to-[#35303f] to-80% 
                 flex justify-center-safe"
 			>
-				<div className="w-[85%] absolute bottom-[38%] font-iqos">
+				<div className="w-[85%] absolute bottom-[42%] font-iqos">
 					{popImage ? (
 						<div className="flex justify-center">
 							<Image
