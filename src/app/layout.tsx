@@ -25,7 +25,7 @@ export default function RootLayout({
 			>
 				<div
 					className="w-full min-h-screen flex flex-col items-center 
-				bg-[#000000]"
+				bg-[#000000] select-none"
 				>
 					{children}
 

@@ -68,7 +68,7 @@ export default function MapDwp({ zoom }: Props) {
 					))}
 
 					<Image
-						src={"/map-dwp-main.webp"}
+						src={"/map-dwp-main-v4.webp"}
 						alt="DWP Map"
 						width={2200}
 						height={1600}
