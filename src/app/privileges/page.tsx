@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import BacktoMain from "@/components/BacktoMain";
 import LogoIqos from "@/components/LogoIqos";
-import Link from "next/link";
 
 export default function PrivilegesPage() {
 	return (
@@ -18,25 +18,11 @@ export default function PrivilegesPage() {
 				<Image
 					src="/page-programprivileges.png"
 					alt="Page Privileges"
-					width={940}
-					height={1600}
+					width={840}
+					height={1200}
 				/>
 
-				<Link href="/" className="self-end">
-					<div className="flex justify-center items-center mr-14 mt-12">
-						<div className="uppercase font-iqos text-2xl mr-4 tracking-wider">
-							Back to menu
-						</div>
-						<div>
-							<Image
-								src="/btn-back.png"
-								alt="button back"
-								width={80}
-								height={80}
-							/>
-						</div>
-					</div>
-				</Link>
+				<BacktoMain />
 			</div>
 		</div>
 	);

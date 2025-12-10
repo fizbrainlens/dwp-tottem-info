@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 interface Props {
 	zoom?: boolean;

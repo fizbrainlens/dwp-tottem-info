@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { fontIqos, fontIqosBreathing } from "@/fonts";
 import Image from "next/image";
+import { fontIqos, fontIqosBreathing } from "@/fonts";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BacktoMain from "../BacktoMain";
 
 export default function MainRundown() {
 	return (
@@ -30,6 +31,8 @@ export default function MainRundown() {
 					/>
 				</Link>
 			</div>
+
+			<BacktoMain />
 		</div>
 	);
 }
