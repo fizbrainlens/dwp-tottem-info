@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function LogoIqos() {
 	return (
 		<Image
-			src="/logo-tottem.png"
+			src="/logo-tottem2.png"
 			alt="Tottem Logo"
 			width={1000}
 			height={900}
