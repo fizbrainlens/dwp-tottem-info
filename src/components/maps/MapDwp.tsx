@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 interface Props {
@@ -13,6 +14,13 @@ type PingMap = {
 	left: number;
 	name: string;
 };
+
+type LinkMap = {
+	id: number;
+	top: number;
+	left: number;
+	link: string;
+}
 
 export default function MapDwp({ zoom }: Props) {
 	const pingMap: PingMap[] = [
@@ -32,6 +40,24 @@ export default function MapDwp({ zoom }: Props) {
 		{ id: 14, top: 27, left: 82.3, name: "Discovery Deck" },
 		{ id: 15, top: 21, left: 67, name: "Stage 1" },
 	];
+
+	const linkMap: LinkMap[] = [
+		{id: 1, top: 57, left: 6, link: "?page=regbooth"},
+		{ id: 2, top: 46, left: 22, link: "?page=tunnelexperience" },
+		{ id: 3, top: 44, left: 29.8, link: "?page=qrideshelter" },
+		{ id: 4, top: 52, left: 39, link: "?page=giantmap" },
+		{ id: 5, top: 64, left: 54, link: "?page=qridestation" },
+		{ id: 6, top: 67, left: 76.5, link: "?page=stage3" },
+		{ id: 7, top: 57, left: 61.7, link: "?page=houseofiqos" },
+		{ id: 8, top: 48, left: 58.5, link: "?page=keyholeportal" },
+		{ id: 9, top: 48, left: 77.5, link: "?page=drumnbus" },
+		{ id: 10, top: 36.5, left: 53, link: "?page=stage2" },
+		{ id: 11, top: 34, left: 62, link: "?page=penthouse" },
+		{ id: 12, top: 37.5, left: 69, link: "?page=vvipblowfish" },
+		{ id: 13, top: 39, left: 79, link: "?page=iqosland" },
+		{ id: 14, top: 27, left: 78.3, link: "?page=thediscoverydeck" },
+		{ id: 15, top: 21, left: 63, link: "?page=stage1" },
+	]
 
 	return zoom === true ? (
 		<div>test</div>
@@ -66,6 +92,21 @@ export default function MapDwp({ zoom }: Props) {
 							{/* <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span> */}
 						</div>
 					))}
+
+					{linkMap.map((ling) => (
+						
+							<Link
+							key={ling.id}
+							href={ling.link}
+							style={{ top: `${ling.top}%`, left: `${ling.left}%` }}
+							className={`absolute z-30 size-14`}
+							>
+							&nbsp;
+							</Link>
+						
+					))
+
+					}
 
 					<Image
 						src={"/map-dwp-main-v4.webp"}
