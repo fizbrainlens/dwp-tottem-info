@@ -116,13 +116,24 @@ export default function MapDwp({ zoom }: Props) {
 						className="mt-30 p-5"
 					/>
 
+					{/* GIANT MAP */}
+					{/* <Image
+						src={"/you-are-here.png"}
+						alt="You are here point"
+						width={60}
+						height={120}
+						className={`relative z-30 animate-bounce
+					-top-60 left-124 transform -translate-x-1/2 -translate-y-1/2`}
+					/> */}
+
+					{/* BEAT & BUS */}
 					<Image
 						src={"/you-are-here.png"}
 						alt="You are here point"
 						width={60}
 						height={120}
-						className="relative z-30 animate-bounce
-					-top-60 left-124 transform -translate-x-1/2 -translate-y-1/2"
+						className={`relative z-30 animate-bounce
+					-top-66 left-202 transform -translate-x-1/2 -translate-y-1/2`}
 					/>
 				</div>
 			</TransformComponent>
