@@ -4,7 +4,7 @@ import BacktoMain from "../BacktoMain";
 export default function DayTwo() {
 	return (
 		<div>
-			<Image src="/rundown/day2.png" alt="Day 2" width={880} height={1600} />
+			<Image src="/rundown/day2.png" alt="Day 2" width={950} height={1600} />
 			<BacktoMain />
 		</div>
 	);

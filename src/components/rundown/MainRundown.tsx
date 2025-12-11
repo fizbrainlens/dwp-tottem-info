@@ -4,7 +4,16 @@ import BacktoMain from "../BacktoMain";
 
 export default function MainRundown() {
 	return (
-		<div className="mt-[60%]">
+		<div className="mt-[20%]">
+
+			<Image
+				src="/text-stagerundown.png"
+				alt="Stage Rundown"
+				width={300}
+				height={200}
+				className="mx-auto mb-[250px]"
+			/>
+
 			<div className="flex w-full gap-8">
 				<Link href="/rundown?day=day1">
 					<Image

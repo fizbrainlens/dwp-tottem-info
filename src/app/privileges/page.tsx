@@ -18,7 +18,7 @@ export default function PrivilegesPage() {
 				<Image
 					src="/page-programprivileges.png"
 					alt="Page Privileges"
-					width={840}
+					width={960}
 					height={1200}
 				/>
 
