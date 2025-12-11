@@ -5,7 +5,6 @@ import BacktoMain from "../BacktoMain";
 export default function MainRundown() {
 	return (
 		<div className="mt-[20%]">
-
 			<Image
 				src="/text-stagerundown.png"
 				alt="Stage Rundown"
