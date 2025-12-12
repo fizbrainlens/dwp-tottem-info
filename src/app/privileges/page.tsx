@@ -14,13 +14,16 @@ export default function PrivilegesPage() {
 			</div>
 
 			<div className="w-full flex flex-col justify-center items-center mt-20">
-				{/* <Image
-					src="/page-programprivileges.png"
-					alt="Page Privileges"
-					width={960}
-					height={1200}
-				/> */}
-				{/* buat tambahan video disini dan hapus image */}
+				<video
+					src="/iqos-privileges.mp4"
+					width="100%"
+					height="100%"
+					autoPlay
+					muted
+					loop
+					playsInline
+					className="w-[70vw] h-auto object-cover rounded-2xl"
+				/>
 
 				<BacktoMain />
 			</div>
