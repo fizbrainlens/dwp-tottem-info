@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 
-export function useIdleTimeout(timeoutMs: number = 30000) {
+export function useIdleTimeout(timeoutMs: number = 80000) {
 	const router = useRouter();
 	const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 

@@ -7,7 +7,7 @@ export default function IdleTimeoutProvider({
 }: {
 	children: React.ReactNode;
 }) {
-	useIdleTimeout(30000); // 30 seconds
+	useIdleTimeout(80000); // 80 seconds
 
 	return <>{children}</>;
 }
