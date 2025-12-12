@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import BacktoMain from "@/components/BacktoMain";
 import LogoIqos from "@/components/LogoIqos";
 
