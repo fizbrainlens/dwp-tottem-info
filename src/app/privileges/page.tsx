@@ -15,12 +15,13 @@ export default function PrivilegesPage() {
 			</div>
 
 			<div className="w-full flex flex-col justify-center items-center mt-20">
-				<Image
+				{/* <Image
 					src="/page-programprivileges.png"
 					alt="Page Privileges"
 					width={960}
 					height={1200}
-				/>
+				/> */}
+				{/* buat tambahan video disini dan hapus image */}
 
 				<BacktoMain />
 			</div>
