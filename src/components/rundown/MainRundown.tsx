@@ -1,46 +1,24 @@
-import Image from "next/image";
-import Link from "next/link";
 import BacktoMain from "../BacktoMain";
+import MainNavButton from "../MainNavButton";
 
 export default function MainRundown() {
 	return (
-		<div className="mt-[20%]">
-			<Image
-				src="/text-stagerundown.png"
-				alt="Stage Rundown"
-				width={300}
-				height={200}
-				className="mx-auto mb-[250px]"
-			/>
-
-			<div className="flex w-full gap-8">
-				<Link href="/rundown?day=day1">
-					<Image
-						src="/btn-day1.png"
-						alt="Button Day 1"
-						width={200}
-						height={200}
-					/>
-				</Link>
-				<Link href="/rundown?day=day2">
-					<Image
-						src="/btn-day2.png"
-						alt="Button Day 2"
-						width={200}
-						height={200}
-					/>
-				</Link>
-				<Link href="/rundown?day=day3">
-					<Image
-						src="/btn-day3.png"
-						alt="Button Day 3"
-						width={200}
-						height={200}
-					/>
-				</Link>
+		<>
+			<div className="flex flex-1 items-center justify-center pt-[100px]">
+				<h1 className="tottem-headline text-center text-[86px] leading-[1.15]">
+					Stage
+					<br />
+					Rundown
+				</h1>
 			</div>
 
+			<nav className="flex flex-col items-center gap-[45px] pb-[420px]">
+				<MainNavButton iqosLabel="DAY 1" iqosLink="/rundown?day=day1" />
+				<MainNavButton iqosLabel="DAY 2" iqosLink="/rundown?day=day2" />
+				<MainNavButton iqosLabel="DAY 3" iqosLink="/rundown?day=day3" />
+			</nav>
+
 			<BacktoMain />
-		</div>
+		</>
 	);
 }

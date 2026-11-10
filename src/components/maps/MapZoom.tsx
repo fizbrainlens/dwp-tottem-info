@@ -1,11 +1,14 @@
 "use client";
 
+import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
 interface Props {
-	mapFile: string;
+	/** File inside /public/mapzoom. Optional: without it only the card is shown. */
+	mapFile?: string;
+	/** Icon inside /public/icon; ".png" is appended when no extension is given. */
 	iconUrl: string;
 	title: string;
 	content: string | ReactNode;
@@ -23,73 +26,53 @@ export default function MapZoom({
 	popWidth,
 	popHeight,
 }: Props) {
-	console.log("maps: ", mapFile);
-
-	const renderContent = () => {
-		// Return content directly - React will render both string and ReactNode properly
-		return content;
-	};
+	const iconSrc = iconUrl.includes(".")
+		? `/icon/${iconUrl}`
+		: `/icon/${iconUrl}.png`;
 
 	return (
-		<div
-			style={{
-				backgroundImage: `url(/mapzoom/${mapFile})`,
-			}}
-			className={`h-[870px] bg-no-repeat 
-            bg-cover bg-position-[center_top_-5rem] rounded-t-[150px] mask-t-from-80% mask-t-to-90%`}
-		>
+		<div>
 			<div
-				className="h-[900px] bg-linear-to-b from-transparent from-0%  to-[#35303f] to-80% 
-                flex justify-center-safe"
-			>
-				<div className="w-[85%] absolute bottom-[42%] font-iqos">
-					{popImage ? (
-						<div className="flex justify-center">
-							<Image
-								src={`/popup/${popImage}.png`}
-								alt={title}
-								width={popWidth || 800}
-								height={popHeight || 700}
-							/>
-						</div>
-					) : (
-						<div>
-							<div
-								className="flex py-5 px-5
-									w-50% border border-white
-								bg-[#23cfd0]/70 rounded-t-4xl"
-							>
-								<Image
-									src={`/icon/${iconUrl}.png`}
-									alt="Icon Stage"
-									width={60}
-									height={60}
-								/>
-								<div
-									className="flex-1 text-center 
-									uppercase text-4xl font-semibold tracking-[2px] mt-2 mr-5 "
-								>
-									{title}
-								</div>
-							</div>
-							<div
-								className="text-center text-2xl py-5 px-15
-								bg-gray-200/80 text-gray-950 rounded-b-4xl"
-							>
-								{renderContent()}
-							</div>
-						</div>
-					)}
-					<div className="flex justify-center mt-5">
-						<Link href={"/map"}>
-							<Image
-								src="/btn-close.png"
-								alt="Button Close"
-								width={60}
-								height={60}
-							/>
-						</Link>
+				style={
+					mapFile ? { backgroundImage: `url(/mapzoom/${mapFile})` } : undefined
+				}
+				className="mx-auto mt-[30px] h-[870px] w-[min(990px,92vw)] rounded-[60px] bg-cover
+					bg-position-[center_top_-5rem] bg-no-repeat mask-y-from-85% mask-y-to-100%"
+			/>
+			<div className="absolute bottom-[45%] left-1/2 w-[85%] -translate-x-1/2 font-iqos">
+				{popImage ? (
+					<div className="flex justify-center">
+						<Image
+							src={`/popup/${popImage}.png`}
+							alt={title}
+							width={popWidth || 800}
+							height={popHeight || 700}
+						/>
 					</div>
+				) : (
+					<div className="tottem-pill rounded-[48px]! overflow-hidden">
+						<div
+							className="flex items-center gap-4 bg-linear-to-r from-tottem-purple/70 to-tottem-teal/70
+								px-8 py-5"
+						>
+							<Image src={iconSrc} alt="" width={60} height={60} />
+							<div className="mr-[60px] flex-1 text-center text-4xl font-bold tracking-[2px] uppercase">
+								{title}
+							</div>
+						</div>
+						<div className="px-15 py-8 text-center text-2xl text-white">
+							{content}
+						</div>
+					</div>
+				)}
+				<div className="mt-5 flex justify-center">
+					<Link
+						href="/map"
+						aria-label="Close"
+						className="tottem-round size-[60px]"
+					>
+						<X className="size-8" strokeWidth={2.5} />
+					</Link>
 				</div>
 			</div>
 		</div>

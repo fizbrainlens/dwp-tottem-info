@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 export default function MainNavButton({
 	iqosLink,
@@ -11,13 +10,12 @@ export default function MainNavButton({
 	className?: string;
 }) {
 	return (
-		<Button
-			asChild
-			variant={"link"}
-			className={`w-[300px] lg:w-3xl py-8 lg:py-16 text-xl 
-				lg:text-5xl rounded-full font-bold ${className ?? ""}`}
+		<Link
+			href={iqosLink}
+			className={`tottem-pill flex h-[93px] w-[min(815px,85vw)] items-center justify-center
+				font-iqos text-[40px] uppercase tracking-wide ${className ?? ""}`}
 		>
-			<Link href={iqosLink}>{iqosLabel}</Link>
-		</Button>
+			{iqosLabel}
+		</Link>
 	);
 }

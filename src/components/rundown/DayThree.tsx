@@ -4,7 +4,13 @@ import BacktoMain from "../BacktoMain";
 export default function DayThree() {
 	return (
 		<div>
-			<Image src="/rundown/day3.png" alt="Day 3" width={950} height={1600} />
+			<Image
+				src="/rundown/day3.png"
+				alt="Day 3"
+				width={880}
+				height={1218}
+				className="h-auto w-[880px]"
+			/>
 			<BacktoMain />
 		</div>
 	);

@@ -12,11 +12,8 @@ export default function RundownPage() {
 
 	const currentPage = searchParams.get("day");
 	return (
-		<div
-			className="p-10 w-full flex flex-col items-center h-screen
-			bg-[url(/bg-tottem-info-home.webp)] bg-cover bg-center text-white font-iqos"
-		>
-			<div className="flex justify-center mb-10">
+		<div className="bg-tottem flex h-screen w-full flex-col items-center font-iqos text-white">
+			<div className="mb-10 flex justify-center">
 				<LogoIqos />
 			</div>
 

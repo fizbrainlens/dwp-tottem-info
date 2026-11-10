@@ -1,222 +1,82 @@
-// import Image from "next/image";
-// import Link from "next/link";
 import MapsButton from "@/components/MapsButton";
-// import { Button } from "@/components/ui/button";
+
+/** Legend order follows the 2026 design (3 columns, read left→right). */
+const LEGENDS = [
+	{ title: "Registration Booth", icon: "icon-regbooth.png", page: "regbooth" },
+	{ title: "House of IQOS", icon: "icon-houseofiqos.png", page: "houseofiqos" },
+	{
+		title: "VVIP Blowfish",
+		icon: "icon-vvipblowfish.png",
+		page: "vvipblowfish",
+	},
+	{
+		title: "Tunnel Experience",
+		icon: "icon-tunnelexperience.png",
+		page: "tunnelexperience",
+	},
+	{ title: "Stage 3", icon: "icon-stage3.png", page: "stage3" },
+	{ title: "Penthouse", icon: "icon-penthouse.png", page: "penthouse" },
+	{ title: "Q-Ride Station", icon: "icon-qride.png", page: "qridestation" },
+	{ title: "Immersive Foyer", icon: "icon-foyer.svg", page: "immersivefoyer" },
+	{
+		title: "The Discovery Deck",
+		icon: "icon-thediscoverydeck.png",
+		page: "thediscoverydeck",
+	},
+	{ title: "Giant Map", icon: "icon-giantmap.png", page: "giantmap" },
+	{ title: "Stage 2", icon: "icon-stage.png", page: "stage2" },
+	{ title: "Stage 1", icon: "icon-stage.png", page: "stage1" },
+	{ title: "Q Ride Shelter", icon: "icon-qride.png", page: "qrideshelter" },
+	{ title: "Beats & Bus", icon: "icon-drumnbus.png", page: "drumnbus" },
+];
+
+// Gap in the top border where the "LEGENDS" heading sits.
+const HEADING_GAP = 170;
+const borderGapMask = {
+	maskImage: `linear-gradient(to right, #000 calc(50% - ${HEADING_GAP}px), transparent calc(50% - ${HEADING_GAP}px), transparent calc(50% + ${HEADING_GAP}px), #000 calc(50% + ${HEADING_GAP}px)), linear-gradient(#000, #000)`,
+	maskSize: "100% 12px, 100% calc(100% - 12px)",
+	maskPosition: "0 0, 0 12px",
+	maskRepeat: "no-repeat",
+};
 
 export default function NavLegends() {
 	return (
-		<div
-			className="flex flex-col bottom-40 fixed w-fit mx-12
-				gap-7 py-15 px-5 border-2 rounded-4xl items-center font-iqos z-10
-				bg-linear-to-t from-[#17898f] from-0% to-transparent to-60%"
+		<section
+			className="fixed bottom-[240px] left-1/2 z-10 w-[min(975px,94vw)] -translate-x-1/2
+				rounded-[56px] bg-linear-to-b from-[#05061a]/55 to-[#05040d]/80 px-[15px] pt-[62px] pb-[28px] font-iqos"
 		>
-			<h3 className="uppercase text-[#20d4d5] text-6xl font-semibold text-center bg-[#35303f] p-3 size-fit -mt-[105px]">
-				LEGENDS
+			{/* Gradient border (purple → cyan) with a gap behind the heading */}
+			<div
+				className="pointer-events-none absolute inset-0"
+				style={borderGapMask}
+			>
+				<div
+					className="absolute inset-0 rounded-[56px] p-[2px]
+						bg-linear-to-r from-tottem-purple via-[#3b3f9e] to-tottem-teal
+						shadow-[0_8px_30px_rgb(184_74_217/0.25)]"
+					style={{
+						WebkitMask:
+							"linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+						WebkitMaskComposite: "xor",
+						mask: "linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0)",
+					}}
+				/>
+			</div>
+
+			<h3 className="tottem-headline absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[56px] leading-none">
+				Legends
 			</h3>
 
-			<div className="flex justify-between gap-5 flex-wrap">
-				<MapsButton
-					title="Registration Booth"
-					iconUrl="icon-regbooth.png"
-					linkUrl="?page=regbooth"
-				/>
-				<MapsButton
-					title="House of IQOS"
-					iconUrl="icon-houseofiqos.png"
-					linkUrl="?page=houseofiqos"
-				/>
-				<MapsButton
-					title="IQOS Land"
-					iconUrl="icon-iqosland.png"
-					linkUrl="?page=iqosland"
-				/>
-				<MapsButton
-					title="Tunnel Experience"
-					iconUrl="icon-tunnelexperience.png"
-					linkUrl="?page=tunnelexperience"
-				/>
-				<MapsButton
-					title="Stage 3"
-					iconUrl="icon-stage3.png"
-					linkUrl="?page=stage3"
-				/>
-				<MapsButton
-					title="VVIP Blowfish"
-					iconUrl="icon-vvipblowfish.png"
-					linkUrl="?page=vvipblowfish"
-				/>
-				<MapsButton
-					title="Q RIDE Shelter A"
-					iconUrl="icon-qride.png"
-					linkUrl="?page=qrideshelter"
-				/>
-				<MapsButton
-					title="Keyhole Portal"
-					iconUrl="icon-keyhole-portal.png"
-					linkUrl="?page=keyholeportal"
-				/>
-				<MapsButton
-					title="Penthouse"
-					iconUrl="icon-penthouse.png"
-					linkUrl="?page=penthouse"
-				/>
-				<MapsButton
-					title="Giant Map"
-					iconUrl="icon-giantmap.png"
-					linkUrl="?page=giantmap"
-				/>
-				<MapsButton
-					title="Stage 2"
-					iconUrl="icon-stage.png"
-					linkUrl="?page=stage2"
-				/>
-				<MapsButton
-					title="The Discovery Deck"
-					iconUrl="icon-thediscoverydeck.png"
-					linkUrl="?page=thediscoverydeck"
-				/>
-				<MapsButton
-					title="Q RIDE Shelter B"
-					iconUrl="icon-qride.png"
-					linkUrl="?page=qridestation"
-				/>
-				<MapsButton
-					title="Beats & Bus"
-					iconUrl="icon-drumnbus.png"
-					linkUrl="?page=drumnbus"
-				/>
-				<MapsButton
-					title="Stage 1"
-					iconUrl="icon-stage.png"
-					linkUrl="?page=stage1"
-				/>
+			<div className="grid grid-cols-3 gap-x-[22px] gap-y-[22px]">
+				{LEGENDS.map((item) => (
+					<MapsButton
+						key={item.page}
+						title={item.title}
+						iconUrl={item.icon}
+						linkUrl={`?page=${item.page}`}
+					/>
+				))}
 			</div>
-
-			{/* <div className="flex justify-around gap-5">
-				<MapsButton
-					title="Stage 1"
-					iconUrl="icon-stage.png"
-					linkUrl="?page=stage1"
-				/>
-				<MapsButton
-					title="Stage 2"
-					iconUrl="icon-stage.png"
-					linkUrl="?page=stage2"
-				/>
-				<MapsButton
-					title="Stage 3"
-					iconUrl="icon-stage3.png"
-					linkUrl="?page=stage3"
-				/>
-			</div>
-
-			<div className="flex justify-around gap-5">
-				<MapsButton
-					title="Registration Booth"
-					iconUrl="icon-regbooth.png"
-					linkUrl="?page=regbooth"
-				/>
-				<MapsButton
-					title="Giant Map"
-					iconUrl="icon-giantmap.png"
-					linkUrl="?page=giantmap"
-				/>
-				<MapsButton
-					title="The Discovery Deck"
-					iconUrl="icon-thediscoverydeck.png"
-					linkUrl="?page=thediscoverydeck"
-				/>
-			</div>
-
-			<div className="flex justify-around gap-5">
-				<MapsButton
-					title="Q Ride Shelter"
-					iconUrl="icon-qride.png"
-					linkUrl="?page=qrideshelter"
-				/>
-				<MapsButton
-					title="Keyhole Portal"
-					iconUrl="icon-keyhole-portal.png"
-					linkUrl="?page=keyholeportal"
-				/>
-				<MapsButton
-					title="Penthouse"
-					iconUrl="icon-penthouse.png"
-					linkUrl="?page=penthouse"
-				/>
-			</div>
-
-			<div className="flex justify-around gap-5">
-				<MapsButton
-					title="Q Ride Station"
-					iconUrl="icon-qride.png"
-					linkUrl="?page=qridestation"
-				/>
-				<MapsButton
-					title="House of IQOS"
-					iconUrl="icon-houseofiqos.png"
-					linkUrl="?page=houseofiqos"
-				/>
-				<MapsButton
-					title="VVIP Blowfish"
-					iconUrl="icon-vvipblowfish.png"
-					linkUrl="?page=vvipblowfish"
-				/>
-			</div>
-
-			<div className="flex justify-around gap-5">
-				<MapsButton
-					title="Drum & Bus"
-					iconUrl="icon-drumnbus.png"
-					linkUrl="?page=drumnbus"
-				/>
-				<MapsButton
-					title="Iqos Land"
-					iconUrl="icon-iqosland.png"
-					linkUrl="?page=iqosland"
-				/>
-				<div className="w-[300px]">&nbsp;</div>
-			</div> */}
-
-			{/* <div className="flex mt-16 mb-7">
-				<Button
-					variant="ghost"
-					asChild
-					className="hover:bg-transparent hover:text-white mr-[150px]"
-				>
-					<Link href="#" className="flex">
-						<div className="text-2xl uppercase tracking-[5px] pr-10">
-							Program <br></br>Privileges
-						</div>
-
-						<Image
-							src="/icon/icon-next-nav.png"
-							alt="Icon next nav"
-							width={80}
-							height={80}
-						/>
-					</Link>
-				</Button>
-
-				<Button
-					variant="ghost"
-					asChild
-					className="hover:bg-transparent hover:text-white"
-				>
-					<Link href="#" className="flex">
-						<div className="text-2xl uppercase tracking-[5px] pr-10">
-							Stage <br></br>Rundown
-						</div>
-
-						<Image
-							src="/icon/icon-next-nav.png"
-							alt="Icon next nav"
-							width={80}
-							height={80}
-						/>
-					</Link>
-				</Button>
-			</div> */}
-		</div>
+		</section>
 	);
 }

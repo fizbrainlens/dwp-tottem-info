@@ -5,10 +5,7 @@ import LogoIqos from "@/components/LogoIqos";
 
 export default function PrivilegesPage() {
 	return (
-		<div
-			className="w-full flex flex-col h-screen
-            bg-[url(/bg-tottem-page.webp)] bg-cover bg-center text-white "
-		>
+		<div className="bg-tottem flex h-screen w-full flex-col text-white">
 			<div className="flex justify-center">
 				<LogoIqos />
 			</div>
@@ -16,13 +13,11 @@ export default function PrivilegesPage() {
 			<div className="w-full flex flex-col justify-center items-center mt-20">
 				<video
 					src="/iqos-privileges.mp4"
-					width="100%"
-					height="100%"
 					autoPlay
 					muted
 					loop
 					playsInline
-					className="w-[70vw] h-auto object-cover rounded-2xl"
+					className="h-[1150px] max-h-[60vh] w-auto rounded-[40px] object-cover shadow-[0_0_40px_rgb(25_211_214/0.35)]"
 				/>
 
 				<BacktoMain />

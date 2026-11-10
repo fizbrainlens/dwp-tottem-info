@@ -3,10 +3,99 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html, body {
-  touch-action: pan-x pan-y;
-  -ms-touch-action: pan-x pan-y;
-  overscroll-behavior: none;
+html,
+body {
+	touch-action: pan-x pan-y;
+	-ms-touch-action: pan-x pan-y;
+	overscroll-behavior: none;
+}
+
+/* ---------- Tottem 2026 design system (Curious Beats x DWP) ---------- */
+@theme {
+	--color-tottem-cyan: #19d3d6;
+	--color-tottem-teal: #0fa6a9;
+	--color-tottem-purple: #7b3fe4;
+	--color-tottem-magenta: #b84ad9;
+	--color-tottem-navy: #070a1f;
+}
+
+/* Full-screen 2026 background used by every page */
+@utility bg-tottem {
+	background-color: #02040f;
+	background-image: url("/2026/bg-tottem-2026.webp");
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+/* Black glowing pill: purple rim on top, teal glow at the bottom */
+@utility tottem-pill {
+	position: relative;
+	isolation: isolate;
+	border-radius: 9999px;
+	color: #fff;
+	background: linear-gradient(180deg, #0b0812 0%, #000 55%, #020c10 100%);
+	box-shadow:
+		0 -2px 14px rgb(184 74 217 / 0.35),
+		0 4px 16px rgb(25 211 214 / 0.22),
+		inset 0 0 14px rgb(0 0 0 / 0.95);
+	transition:
+		transform 120ms ease,
+		box-shadow 120ms ease;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		border-radius: inherit;
+		padding: 2px;
+		background: linear-gradient(
+			180deg,
+			rgb(184 74 217 / 0.85) 0%,
+			rgb(70 45 110 / 0.45) 35%,
+			rgb(40 40 60 / 0.35) 60%,
+			rgb(25 211 214 / 0.75) 100%
+		);
+		-webkit-mask:
+			linear-gradient(#000 0 0) content-box,
+			linear-gradient(#000 0 0);
+		-webkit-mask-composite: xor;
+		mask:
+			linear-gradient(#000 0 0) content-box exclude,
+			linear-gradient(#000 0 0);
+		pointer-events: none;
+	}
+
+	&:active {
+		transform: scale(0.98);
+		box-shadow:
+			0 -2px 18px rgb(184 74 217 / 0.55),
+			0 4px 22px rgb(25 211 214 / 0.45),
+			inset 0 0 14px rgb(0 0 0 / 0.95);
+	}
+}
+
+/* Round cyan -> purple action button (back / close) */
+@utility tottem-round {
+	display: grid;
+	place-items: center;
+	border-radius: 9999px;
+	color: #fff;
+	background:
+		radial-gradient(circle at 30% 25%, rgb(255 255 255 / 0.35), transparent 45%),
+		linear-gradient(135deg, #19d3d6 0%, #4f8fe6 50%, #7b3fe4 100%);
+	box-shadow:
+		0 0 18px rgb(25 211 214 / 0.45),
+		inset 0 -4px 10px rgb(60 20 120 / 0.45);
+}
+
+/* Headline text glow (YOUR JOURNEY STARTS HERE, LEGENDS, ...) */
+@utility tottem-headline {
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-shadow: 0 0 24px rgb(0 0 0 / 0.55);
 }
 
 @theme inline {
