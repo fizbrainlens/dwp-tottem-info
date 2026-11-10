@@ -3,41 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
+import { LOCATIONS } from "./locations";
 
-type Hotspot = {
-	/** Centre of the location, in % of the map image (map-tottem-crop.png). */
-	top: number;
-	left: number;
-	name: string;
-	link: string;
-};
-
-// Positions measured on /2026/map-tottem-crop.png (2754x1282).
-const HOTSPOTS: Hotspot[] = [
-	{ top: 31.7, left: 7.3, name: "Registration Booth", link: "?page=regbooth" },
-	{ top: 25.5, left: 10.4, name: "Giant Map", link: "?page=giantmap" },
-	{
-		top: 25,
-		left: 13.4,
-		name: "Immersive Foyer",
-		link: "?page=immersivefoyer",
-	},
-	{
-		top: 26.3,
-		left: 17.4,
-		name: "Tunnel Experience",
-		link: "?page=tunnelexperience",
-	},
-	{ top: 45.1, left: 8.2, name: "Q-Ride Station", link: "?page=qridestation" },
-	{ top: 63, left: 8.3, name: "Q Ride Shelter", link: "?page=qrideshelter" },
-	{ top: 29, left: 37.8, name: "Beats & Bus", link: "?page=drumnbus" },
-	{ top: 21, left: 50.5, name: "IQOS Land", link: "?page=iqosland" },
-	{ top: 19.9, left: 62.5, name: "Penthouse", link: "?page=penthouse" },
-	{ top: 25.8, left: 71.5, name: "VVIP Blowfish", link: "?page=vvipblowfish" },
-	{ top: 10.7, left: 83.5, name: "Stage 1", link: "?page=stage1" },
-	{ top: 55.9, left: 87, name: "Stage 2", link: "?page=stage2" },
-	{ top: 75.7, left: 51.8, name: "Stage 3", link: "?page=stage3" },
-];
+const HOTSPOTS = LOCATIONS.flatMap((loc) =>
+	loc.hotspot
+		? [{ ...loc.hotspot, name: loc.title, link: `?page=${loc.key}` }]
+		: [],
+);
 
 export default function MapDwp() {
 	return (

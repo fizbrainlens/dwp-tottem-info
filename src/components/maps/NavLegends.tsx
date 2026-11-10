@@ -1,34 +1,5 @@
 import MapsButton from "@/components/MapsButton";
-
-/** Legend order follows the 2026 design (3 columns, read left→right). */
-const LEGENDS = [
-	{ title: "Registration Booth", icon: "icon-regbooth.png", page: "regbooth" },
-	{ title: "House of IQOS", icon: "icon-houseofiqos.png", page: "houseofiqos" },
-	{
-		title: "VVIP Blowfish",
-		icon: "icon-vvipblowfish.png",
-		page: "vvipblowfish",
-	},
-	{
-		title: "Tunnel Experience",
-		icon: "icon-tunnelexperience.png",
-		page: "tunnelexperience",
-	},
-	{ title: "Stage 3", icon: "icon-stage3.png", page: "stage3" },
-	{ title: "Penthouse", icon: "icon-penthouse.png", page: "penthouse" },
-	{ title: "Q-Ride Station", icon: "icon-qride.png", page: "qridestation" },
-	{ title: "Immersive Foyer", icon: "icon-foyer.svg", page: "immersivefoyer" },
-	{
-		title: "The Discovery Deck",
-		icon: "icon-thediscoverydeck.png",
-		page: "thediscoverydeck",
-	},
-	{ title: "Giant Map", icon: "icon-giantmap.png", page: "giantmap" },
-	{ title: "Stage 2", icon: "icon-stage.png", page: "stage2" },
-	{ title: "Stage 1", icon: "icon-stage.png", page: "stage1" },
-	{ title: "Q Ride Shelter", icon: "icon-qride.png", page: "qrideshelter" },
-	{ title: "Beats & Bus", icon: "icon-drumnbus.png", page: "drumnbus" },
-];
+import { LEGEND_KEYS, LOCATION_BY_KEY } from "./locations";
 
 // Gap in the top border where the "LEGENDS" heading sits.
 const HEADING_GAP = 170;
@@ -39,7 +10,7 @@ const borderGapMask = {
 	maskRepeat: "no-repeat",
 };
 
-export default function NavLegends() {
+export default function NavLegends({ activeKey }: { activeKey?: string }) {
 	return (
 		<section
 			className="fixed bottom-[240px] left-1/2 z-10 w-[min(975px,94vw)] -translate-x-1/2
@@ -68,14 +39,18 @@ export default function NavLegends() {
 			</h3>
 
 			<div className="grid grid-cols-3 gap-x-[22px] gap-y-[22px]">
-				{LEGENDS.map((item) => (
-					<MapsButton
-						key={item.page}
-						title={item.title}
-						iconUrl={item.icon}
-						linkUrl={`?page=${item.page}`}
-					/>
-				))}
+				{LEGEND_KEYS.map((key) => {
+					const item = LOCATION_BY_KEY[key];
+					return (
+						<MapsButton
+							key={key}
+							title={item.title}
+							iconUrl={item.icon}
+							linkUrl={`?page=${key}`}
+							active={key === activeKey}
+						/>
+					);
+				})}
 			</div>
 		</section>
 	);

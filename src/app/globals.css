@@ -76,6 +76,18 @@ body {
 	}
 }
 
+/* Selected legend item: filled cyan pill with a soft glow */
+@utility tottem-pill-active {
+	position: relative;
+	border-radius: 9999px;
+	color: #fff;
+	background: linear-gradient(180deg, #4fe6e8 0%, #19d3d6 45%, #0fb3b8 100%);
+	box-shadow:
+		0 0 22px rgb(25 211 214 / 0.55),
+		inset 0 2px 0 rgb(255 255 255 / 0.35),
+		inset 0 -3px 8px rgb(10 90 120 / 0.35);
+}
+
 /* Round cyan -> purple action button (back / close) */
 @utility tottem-round {
 	display: grid;
